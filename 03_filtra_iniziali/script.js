@@ -2,11 +2,29 @@
 
 const names = ["Anna", "Luca", "Marco", "Adele", "Laura", "Alessandra"];
 
+const searchedChar = "A";
 
 // Dichiara la funzione qui.
 
+function filterByInitials(namesList, searchedInitial) {
+    const filteredNames  = [];
+  
+    for (let i = 0; i < namesList.length; i++) {
+    const currentName = namesList[i];
+        if (currentName[0] === searchedInitial) {
+            filteredNames.push(currentName);
+        }
+        
+    }
+  
+    return filteredNames;
+  }
+    
 
 // Invoca la funzione qui e stampa il risultato in console
+
+console.log(filterByInitials(names,searchedChar));
+
 
 
 
